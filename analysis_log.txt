@@ -1,0 +1,350 @@
+--- SQL Q1 ---
+version  n_players  d1_retention  d7_retention  mean_rounds
+gate_30      44700       0.44819        0.1902       52.456
+gate_40      45489       0.44228        0.1820       51.299
+--- SQL Q2 ---
+version  median_rounds
+gate_30           17.0
+gate_40           16.0
+--- SQL Q3 ---
+version  retention_1  retention_7  n_players  share_of_arm
+gate_30            0            0      22840       0.51096
+gate_30            0            1       1826       0.04085
+gate_30            1            0      13358       0.29884
+gate_30            1            1       6676       0.14935
+gate_40            0            0      23597       0.51874
+gate_40            0            1       1773       0.03898
+gate_40            1            0      13613       0.29926
+gate_40            1            1       6506       0.14302
+--- SQL Q4 ---
+version rounds_bucket  n_players  d7_retention
+gate_30             0       1937       0.00826
+gate_40             0       2057       0.00632
+gate_30           1-9      14898       0.01806
+gate_40           1-9      15345       0.01825
+gate_30         10-29      11209       0.08110
+gate_40         10-29      11474       0.07338
+gate_30          100+       6168       0.71141
+gate_40          100+       6348       0.71030
+gate_30         30-99      10488       0.27841
+gate_40         30-99      10265       0.25670
+--- SQL Q5 ---
+ rows  distinct_users  null_rows  max_rounds
+90189           90189          0       49854
+
+=== RESULTS ===
+{
+  "sql": {
+    "Q1": [
+      {
+        "version": "gate_30",
+        "n_players": 44700,
+        "d1_retention": 0.44819,
+        "d7_retention": 0.1902,
+        "mean_rounds": 52.456
+      },
+      {
+        "version": "gate_40",
+        "n_players": 45489,
+        "d1_retention": 0.44228,
+        "d7_retention": 0.182,
+        "mean_rounds": 51.299
+      }
+    ],
+    "Q2": [
+      {
+        "version": "gate_30",
+        "median_rounds": 17.0
+      },
+      {
+        "version": "gate_40",
+        "median_rounds": 16.0
+      }
+    ],
+    "Q3": [
+      {
+        "version": "gate_30",
+        "retention_1": 0,
+        "retention_7": 0,
+        "n_players": 22840,
+        "share_of_arm": 0.51096
+      },
+      {
+        "version": "gate_30",
+        "retention_1": 0,
+        "retention_7": 1,
+        "n_players": 1826,
+        "share_of_arm": 0.04085
+      },
+      {
+        "version": "gate_30",
+        "retention_1": 1,
+        "retention_7": 0,
+        "n_players": 13358,
+        "share_of_arm": 0.29884
+      },
+      {
+        "version": "gate_30",
+        "retention_1": 1,
+        "retention_7": 1,
+        "n_players": 6676,
+        "share_of_arm": 0.14935
+      },
+      {
+        "version": "gate_40",
+        "retention_1": 0,
+        "retention_7": 0,
+        "n_players": 23597,
+        "share_of_arm": 0.51874
+      },
+      {
+        "version": "gate_40",
+        "retention_1": 0,
+        "retention_7": 1,
+        "n_players": 1773,
+        "share_of_arm": 0.03898
+      },
+      {
+        "version": "gate_40",
+        "retention_1": 1,
+        "retention_7": 0,
+        "n_players": 13613,
+        "share_of_arm": 0.29926
+      },
+      {
+        "version": "gate_40",
+        "retention_1": 1,
+        "retention_7": 1,
+        "n_players": 6506,
+        "share_of_arm": 0.14302
+      }
+    ],
+    "Q4": [
+      {
+        "version": "gate_30",
+        "rounds_bucket": "0",
+        "n_players": 1937,
+        "d7_retention": 0.00826
+      },
+      {
+        "version": "gate_40",
+        "rounds_bucket": "0",
+        "n_players": 2057,
+        "d7_retention": 0.00632
+      },
+      {
+        "version": "gate_30",
+        "rounds_bucket": "1-9",
+        "n_players": 14898,
+        "d7_retention": 0.01806
+      },
+      {
+        "version": "gate_40",
+        "rounds_bucket": "1-9",
+        "n_players": 15345,
+        "d7_retention": 0.01825
+      },
+      {
+        "version": "gate_30",
+        "rounds_bucket": "10-29",
+        "n_players": 11209,
+        "d7_retention": 0.0811
+      },
+      {
+        "version": "gate_40",
+        "rounds_bucket": "10-29",
+        "n_players": 11474,
+        "d7_retention": 0.07338
+      },
+      {
+        "version": "gate_30",
+        "rounds_bucket": "100+",
+        "n_players": 6168,
+        "d7_retention": 0.71141
+      },
+      {
+        "version": "gate_40",
+        "rounds_bucket": "100+",
+        "n_players": 6348,
+        "d7_retention": 0.7103
+      },
+      {
+        "version": "gate_30",
+        "rounds_bucket": "30-99",
+        "n_players": 10488,
+        "d7_retention": 0.27841
+      },
+      {
+        "version": "gate_40",
+        "rounds_bucket": "30-99",
+        "n_players": 10265,
+        "d7_retention": 0.2567
+      }
+    ],
+    "Q5": [
+      {
+        "rows": 90189,
+        "distinct_users": 90189,
+        "null_rows": 0,
+        "max_rounds": 49854
+      }
+    ]
+  },
+  "srm": {
+    "n_gate_30": 44700,
+    "n_gate_40": 45489,
+    "share_gate_40": 0.5043741476233243,
+    "chi2": 6.9024049496058275,
+    "p": 0.008607987810836262
+  },
+  "retention": {
+    "retention_7": {
+      "p_gate_30": 0.19020134228187918,
+      "p_gate_40": 0.18200004396667327,
+      "diff_pp": -0.8201298315205913,
+      "diff_ci95_wald_pp": [
+        -1.3281552418885547,
+        -0.312104421152628
+      ],
+      "diff_ci95_boot_pp": [
+        -1.3268294967984742,
+        -0.30860147102455976
+      ],
+      "rel_change_pct": -4.311903489646019,
+      "rel_ci95_boot_pct": [
+        -6.882118363817624,
+        -1.641882102793173
+      ],
+      "z": -3.164358912748191,
+      "p_raw": 0.001554249975614329,
+      "p_holm": 0.003108499951228658,
+      "significant_after_holm": true
+    },
+    "retention_1": {
+      "p_gate_30": 0.4481879194630872,
+      "p_gate_40": 0.44228274967574577,
+      "diff_pp": -0.5905169787341458,
+      "diff_ci95_wald_pp": [
+        -1.2392439449445218,
+        0.05820998747623034
+      ],
+      "diff_ci95_boot_pp": [
+        -1.2416082153351917,
+        0.06491548734917789
+      ],
+      "rel_change_pct": -1.317565585974656,
+      "rel_ci95_boot_pct": [
+        -2.753362972818462,
+        0.14548146122010575
+      ],
+      "z": -1.7840862247974725,
+      "p_raw": 0.07440965529691913,
+      "p_holm": 0.07440965529691913,
+      "significant_after_holm": false
+    }
+  },
+  "engagement": {
+    "mean_gate_30": 52.45626398210291,
+    "mean_gate_40": 51.29877552814966,
+    "median_gate_30": 17.0,
+    "median_gate_40": 16.0,
+    "mean_diff": -1.157488453953249,
+    "mean_diff_boot_ci95": [
+      -4.004073209785505,
+      0.9620911172049675
+    ],
+    "mannwhitney_p": 0.05020880772044255,
+    "prob_superiority_gate_40": 0.49623671809341224,
+    "max_rounds_user": {
+      "rounds": 49854,
+      "version": "gate_30"
+    },
+    "without_outlier": {
+      "mean_gate_30": 51.342110561757536,
+      "mean_gate_40": 51.29877552814966,
+      "mean_diff": -0.04333503360787461,
+      "mean_diff_boot_ci95": [
+        -1.3887497793127284,
+        1.2718970061734372
+      ]
+    }
+  },
+  "power": {
+    "mde_pp_retention_7_80pct": 0.7268301848794262,
+    "mde_pp_retention_1_80pct": 0.9269389942270834,
+    "n_per_arm_for_0.5pp_drop_d7": 95733.15870728802,
+    "n_per_arm_for_1.0pp_drop_d7": 23684.2582833187,
+    "n_per_arm_for_0.25pp_drop_d7": 384901.15014288056
+  },
+  "sensitivity_exclude_zero_round_users": {
+    "n_excluded": 3994,
+    "retention_7": {
+      "p_gate_30": 0.19844257886490657,
+      "p_gate_40": 0.1903205010130779,
+      "diff_pp": -0.8122077851828668,
+      "diff_ci95_wald_pp": [
+        -1.3405875671817178,
+        -0.2838280031840159
+      ],
+      "diff_ci95_boot_pp": [
+        -1.331359627876904,
+        -0.2856758069176901
+      ],
+      "rel_change_pct": -4.092910855264542,
+      "rel_ci95_boot_pct": [
+        -6.615801538595366,
+        -1.4584494950165936
+      ],
+      "z": -3.013003335580102,
+      "p_raw": 0.0025867607438543124
+    },
+    "retention_1": {
+      "p_gate_30": 0.46753034165049223,
+      "p_gate_40": 0.46217074967765703,
+      "diff_pp": -0.5359591972835198,
+      "diff_ci95_wald_pp": [
+        -1.2019057188555238,
+        0.12998732428848425
+      ],
+      "diff_ci95_boot_pp": [
+        -1.189168987246903,
+        0.13824833942234965
+      ],
+      "rel_change_pct": -1.1463623845063386,
+      "rel_ci95_boot_pct": [
+        -2.5273332811178504,
+        0.2974564798594645
+      ],
+      "z": -1.577381520337375,
+      "p_raw": 0.11470776493185678
+    }
+  },
+  "exploratory_rounds_ge_30": {
+    "n_gate_30": 16656,
+    "n_gate_40": 16613,
+    "retention_7": {
+      "p_gate_30": 0.4387608069164265,
+      "p_gate_40": 0.4300246794678866,
+      "diff_pp": -0.873612744853991,
+      "diff_ci95_wald_pp": [
+        -1.9388340025016473,
+        0.1916085127936654
+      ],
+      "diff_ci95_boot_pp": [
+        -1.931013567939489,
+        0.16044896736077632
+      ],
+      "rel_change_pct": -1.9910911163503076,
+      "rel_ci95_boot_pct": [
+        -4.352468184797869,
+        0.37107335223992993
+      ],
+      "z": -1.6073448180176597,
+      "p_raw": 0.10797874787534656
+    }
+  },
+  "cuped": {
+    "applicable": false,
+    "reason": "CUPED needs a pre-experiment covariate correlated with the outcome. This dataset has none: sum_gamerounds covers the first 14 days after install, i.e. after assignment, so using it as a covariate would bias the estimate."
+  }
+}
